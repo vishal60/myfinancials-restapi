@@ -57,6 +57,7 @@ public class PremierGetAccountsController {
     	try {
 			Unmarshaller unmarshaller = JAXBContext.newInstance(Row.class).createUnmarshaller();
 			userAccount = (Row)unmarshaller.unmarshal(new StringReader(userDetails));
+			//
 		} catch (JAXBException e) {e.printStackTrace();}
     	
     	return userAccount;
