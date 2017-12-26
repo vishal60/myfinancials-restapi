@@ -48,8 +48,7 @@ public class PremierGetAccountsController {
 		
 		return userAccount;
     }
-
-    
+   
     private Row toUserAccount(String userDetails) {
 
     	Row userAccount = null;
@@ -57,7 +56,6 @@ public class PremierGetAccountsController {
     	try {
 			Unmarshaller unmarshaller = JAXBContext.newInstance(Row.class).createUnmarshaller();
 			userAccount = (Row)unmarshaller.unmarshal(new StringReader(userDetails));
-			//
 		} catch (JAXBException e) {e.printStackTrace();}
     	
     	return userAccount;
@@ -65,38 +63,38 @@ public class PremierGetAccountsController {
 
 	private UserAccount toGreeting(JSONObject userDetails) {
 
-	UserAccount user = new UserAccount();
-	Address address = new Address();
-	ParentParty parentParty = new ParentParty();
-	
-	user.setAccount_name(userDetails.get("account_name").toString());
-	user.setAccount_number(userDetails.get("account_number").toString());
-	user.setCurrency_code(userDetails.get("currency_code").toString());
-	user.setCust_account_id(userDetails.get("cust_account_id").toString());
-	user.setOutstanding_balance(userDetails.get("outstanding_balance").toString());
-	user.setParty_id(userDetails.get("party_id").toString());
-	user.setParty_number(userDetails.get("party_number").toString());
-	
-	if (userDetails.get("parent_party") != "") {
-		parentParty.setParty_id(((JSONObject) ((JSONObject) userDetails.get("parent_party")).get("parent_party_row"))
-						.get("party_id").toString());
-		parentParty.setParty_number(((JSONObject) ((JSONObject) userDetails.get("parent_party")).get("parent_party_row"))
-						.get("party_number").toString());
-		user.setParent_party(parentParty);
-	} else 
-		user.setParent_party(null);
-	
-	if (userDetails.get("address") != "") {
-		JSONObject jAddress = (JSONObject) ((JSONObject) userDetails.get("address")).get("address_row");
-		address.setAddress_id(jAddress.get("address_id").toString());
-		address.setBranch_name(((JSONObject) jAddress.get("branch_name")).get("null").toString());
-		address.setConcatenated_address(jAddress.get("concatenated_address").toString());
-		address.setFraud_bankruptcy(jAddress.get("fraud_bankruptcy").toString());
-		user.setAddresses(address);
-	} else
-		user.setAddresses(null);
-	return user;
-}
+		UserAccount user = new UserAccount();
+		Address address = new Address();
+		ParentParty parentParty = new ParentParty();
+		
+		user.setAccount_name(userDetails.get("account_name").toString());
+		user.setAccount_number(userDetails.get("account_number").toString());
+		user.setCurrency_code(userDetails.get("currency_code").toString());
+		user.setCust_account_id(userDetails.get("cust_account_id").toString());
+		user.setOutstanding_balance(userDetails.get("outstanding_balance").toString());
+		user.setParty_id(userDetails.get("party_id").toString());
+		user.setParty_number(userDetails.get("party_number").toString());
+		
+		if (userDetails.get("parent_party") != "") {
+			parentParty.setParty_id(((JSONObject) ((JSONObject) userDetails.get("parent_party")).get("parent_party_row"))
+							.get("party_id").toString());
+			parentParty.setParty_number(((JSONObject) ((JSONObject) userDetails.get("parent_party")).get("parent_party_row"))
+							.get("party_number").toString());
+			user.setParent_party(parentParty);
+		} else 
+			user.setParent_party(null);
+		
+		if (userDetails.get("address") != "") {
+			JSONObject jAddress = (JSONObject) ((JSONObject) userDetails.get("address")).get("address_row");
+			address.setAddress_id(jAddress.get("address_id").toString());
+			address.setBranch_name(((JSONObject) jAddress.get("branch_name")).get("null").toString());
+			address.setConcatenated_address(jAddress.get("concatenated_address").toString());
+			address.setFraud_bankruptcy(jAddress.get("fraud_bankruptcy").toString());
+			user.setAddresses(address);
+		} else
+			user.setAddresses(null);
+		return user;
+	}
     
 	private StringBuffer getPayloadfromHttp(String urlString, String user_name, String account_number) {
 
@@ -171,7 +169,6 @@ public class PremierGetAccountsController {
 	private static JSONObject xml2json(StringBuffer sb) {
 		
 		JSONObject jsonObject = XML.toJSONObject(sb.toString());
-		//String jsondata = jsonObject.toString(2);
 		return jsonObject;
 	}
 	

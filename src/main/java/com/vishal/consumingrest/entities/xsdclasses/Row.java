@@ -16,78 +16,78 @@ import javax.xml.bind.annotation.XmlType;
  * this class.
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="cust_account_id" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="account_number" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="account_name" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="outstanding_balance" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="party_number" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="party_id" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="parent_party">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="parent_party_row">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element name="party_id" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *                             &lt;element name="party_number" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *                           &lt;/sequence>
- *                           &lt;attribute name="num" type="{http://www.w3.org/2001/XMLSchema}int" />
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="currency_code" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="address">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="address_row">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element name="address_id" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *                             &lt;element name="fraud_bankruptcy" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *                             &lt;element name="concatenated_address" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *                             &lt;element name="branch_name">
- *                               &lt;complexType>
- *                                 &lt;complexContent>
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                     &lt;attribute name="null" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *                                   &lt;/restriction>
- *                                 &lt;/complexContent>
- *                               &lt;/complexType>
- *                             &lt;/element>
- *                           &lt;/sequence>
- *                           &lt;attribute name="num" type="{http://www.w3.org/2001/XMLSchema}int" />
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *       &lt;attribute name="num" type="{http://www.w3.org/2001/XMLSchema}int" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * <complexType>
+ *   <complexContent>
+ *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       <sequence>
+ *         <element name="cust_account_id" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         <element name="account_number" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         <element name="account_name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         <element name="outstanding_balance" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         <element name="party_number" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         <element name="party_id" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         <element name="parent_party">
+ *           <complexType>
+ *             <complexContent>
+ *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 <sequence>
+ *                   <element name="parent_party_row">
+ *                     <complexType>
+ *                       <complexContent>
+ *                         <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                           <sequence>
+ *                             <element name="party_id" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *                             <element name="party_number" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *                           </sequence>
+ *                           <attribute name="num" type="{http://www.w3.org/2001/XMLSchema}int" />
+ *                         </restriction>
+ *                       </complexContent>
+ *                     </complexType>
+ *                   </element>
+ *                 </sequence>
+ *               </restriction>
+ *             </complexContent>
+ *           </complexType>
+ *         </element>
+ *         <element name="currency_code" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         <element name="address">
+ *           <complexType>
+ *             <complexContent>
+ *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 <sequence>
+ *                   <element name="address_row">
+ *                     <complexType>
+ *                       <complexContent>
+ *                         <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                           <sequence>
+ *                             <element name="address_id" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *                             <element name="fraud_bankruptcy" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *                             <element name="concatenated_address" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *                             <element name="branch_name">
+ *                               <complexType>
+ *                                 <complexContent>
+ *                                   <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                                     <attribute name="null" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                                   </restriction>
+ *                                 </complexContent>
+ *                               </complexType>
+ *                             </element>
+ *                           </sequence>
+ *                           <attribute name="num" type="{http://www.w3.org/2001/XMLSchema}int" />
+ *                         </restriction>
+ *                       </complexContent>
+ *                     </complexType>
+ *                   </element>
+ *                 </sequence>
+ *               </restriction>
+ *             </complexContent>
+ *           </complexType>
+ *         </element>
+ *       </sequence>
+ *       <attribute name="num" type="{http://www.w3.org/2001/XMLSchema}int" />
+ *     </restriction>
+ *   </complexContent>
+ * </complexType>
  * </pre>
  * 
  * 
@@ -318,37 +318,37 @@ public class Row {
 	 * this class.
 	 * 
 	 * <pre>
-	 * &lt;complexType>
-	 *   &lt;complexContent>
-	 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-	 *       &lt;sequence>
-	 *         &lt;element name="address_row">
-	 *           &lt;complexType>
-	 *             &lt;complexContent>
-	 *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-	 *                 &lt;sequence>
-	 *                   &lt;element name="address_id" type="{http://www.w3.org/2001/XMLSchema}int"/>
-	 *                   &lt;element name="fraud_bankruptcy" type="{http://www.w3.org/2001/XMLSchema}string"/>
-	 *                   &lt;element name="concatenated_address" type="{http://www.w3.org/2001/XMLSchema}string"/>
-	 *                   &lt;element name="branch_name">
-	 *                     &lt;complexType>
-	 *                       &lt;complexContent>
-	 *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-	 *                           &lt;attribute name="null" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-	 *                         &lt;/restriction>
-	 *                       &lt;/complexContent>
-	 *                     &lt;/complexType>
-	 *                   &lt;/element>
-	 *                 &lt;/sequence>
-	 *                 &lt;attribute name="num" type="{http://www.w3.org/2001/XMLSchema}int" />
-	 *               &lt;/restriction>
-	 *             &lt;/complexContent>
-	 *           &lt;/complexType>
-	 *         &lt;/element>
-	 *       &lt;/sequence>
-	 *     &lt;/restriction>
-	 *   &lt;/complexContent>
-	 * &lt;/complexType>
+	 * <complexType>
+	 *   <complexContent>
+	 *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+	 *       <sequence>
+	 *         <element name="address_row">
+	 *           <complexType>
+	 *             <complexContent>
+	 *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+	 *                 <sequence>
+	 *                   <element name="address_id" type="{http://www.w3.org/2001/XMLSchema}int"/>
+	 *                   <element name="fraud_bankruptcy" type="{http://www.w3.org/2001/XMLSchema}string"/>
+	 *                   <element name="concatenated_address" type="{http://www.w3.org/2001/XMLSchema}string"/>
+	 *                   <element name="branch_name">
+	 *                     <complexType>
+	 *                       <complexContent>
+	 *                         <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+	 *                           <attribute name="null" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+	 *                         </restriction>
+	 *                       </complexContent>
+	 *                     </complexType>
+	 *                   </element>
+	 *                 </sequence>
+	 *                 <attribute name="num" type="{http://www.w3.org/2001/XMLSchema}int" />
+	 *               </restriction>
+	 *             </complexContent>
+	 *           </complexType>
+	 *         </element>
+	 *       </sequence>
+	 *     </restriction>
+	 *   </complexContent>
+	 * </complexType>
 	 * </pre>
 	 * 
 	 * 
@@ -390,27 +390,27 @@ public class Row {
 		 * this class.
 		 * 
 		 * <pre>
-		 * &lt;complexType>
-		 *   &lt;complexContent>
-		 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-		 *       &lt;sequence>
-		 *         &lt;element name="address_id" type="{http://www.w3.org/2001/XMLSchema}int"/>
-		 *         &lt;element name="fraud_bankruptcy" type="{http://www.w3.org/2001/XMLSchema}string"/>
-		 *         &lt;element name="concatenated_address" type="{http://www.w3.org/2001/XMLSchema}string"/>
-		 *         &lt;element name="branch_name">
-		 *           &lt;complexType>
-		 *             &lt;complexContent>
-		 *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-		 *                 &lt;attribute name="null" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-		 *               &lt;/restriction>
-		 *             &lt;/complexContent>
-		 *           &lt;/complexType>
-		 *         &lt;/element>
-		 *       &lt;/sequence>
-		 *       &lt;attribute name="num" type="{http://www.w3.org/2001/XMLSchema}int" />
-		 *     &lt;/restriction>
-		 *   &lt;/complexContent>
-		 * &lt;/complexType>
+		 * <complexType>
+		 *   <complexContent>
+		 *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+		 *       <sequence>
+		 *         <element name="address_id" type="{http://www.w3.org/2001/XMLSchema}int"/>
+		 *         <element name="fraud_bankruptcy" type="{http://www.w3.org/2001/XMLSchema}string"/>
+		 *         <element name="concatenated_address" type="{http://www.w3.org/2001/XMLSchema}string"/>
+		 *         <element name="branch_name">
+		 *           <complexType>
+		 *             <complexContent>
+		 *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+		 *                 <attribute name="null" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+		 *               </restriction>
+		 *             </complexContent>
+		 *           </complexType>
+		 *         </element>
+		 *       </sequence>
+		 *       <attribute name="num" type="{http://www.w3.org/2001/XMLSchema}int" />
+		 *     </restriction>
+		 *   </complexContent>
+		 * </complexType>
 		 * </pre>
 		 * 
 		 * 
@@ -539,13 +539,13 @@ public class Row {
 			 * this class.
 			 * 
 			 * <pre>
-			 * &lt;complexType>
-			 *   &lt;complexContent>
-			 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-			 *       &lt;attribute name="null" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-			 *     &lt;/restriction>
-			 *   &lt;/complexContent>
-			 * &lt;/complexType>
+			 * <complexType>
+			 *   <complexContent>
+			 *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+			 *       <attribute name="null" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+			 *     </restriction>
+			 *   </complexContent>
+			 * </complexType>
 			 * </pre>
 			 * 
 			 * 
@@ -593,27 +593,27 @@ public class Row {
 	 * this class.
 	 * 
 	 * <pre>
-	 * &lt;complexType>
-	 *   &lt;complexContent>
-	 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-	 *       &lt;sequence>
-	 *         &lt;element name="parent_party_row">
-	 *           &lt;complexType>
-	 *             &lt;complexContent>
-	 *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-	 *                 &lt;sequence>
-	 *                   &lt;element name="party_id" type="{http://www.w3.org/2001/XMLSchema}int"/>
-	 *                   &lt;element name="party_number" type="{http://www.w3.org/2001/XMLSchema}int"/>
-	 *                 &lt;/sequence>
-	 *                 &lt;attribute name="num" type="{http://www.w3.org/2001/XMLSchema}int" />
-	 *               &lt;/restriction>
-	 *             &lt;/complexContent>
-	 *           &lt;/complexType>
-	 *         &lt;/element>
-	 *       &lt;/sequence>
-	 *     &lt;/restriction>
-	 *   &lt;/complexContent>
-	 * &lt;/complexType>
+	 * <complexType>
+	 *   <complexContent>
+	 *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+	 *       <sequence>
+	 *         <element name="parent_party_row">
+	 *           <complexType>
+	 *             <complexContent>
+	 *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+	 *                 <sequence>
+	 *                   <element name="party_id" type="{http://www.w3.org/2001/XMLSchema}int"/>
+	 *                   <element name="party_number" type="{http://www.w3.org/2001/XMLSchema}int"/>
+	 *                 </sequence>
+	 *                 <attribute name="num" type="{http://www.w3.org/2001/XMLSchema}int" />
+	 *               </restriction>
+	 *             </complexContent>
+	 *           </complexType>
+	 *         </element>
+	 *       </sequence>
+	 *     </restriction>
+	 *   </complexContent>
+	 * </complexType>
 	 * </pre>
 	 * 
 	 * 
@@ -655,17 +655,17 @@ public class Row {
 		 * this class.
 		 * 
 		 * <pre>
-		 * &lt;complexType>
-		 *   &lt;complexContent>
-		 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-		 *       &lt;sequence>
-		 *         &lt;element name="party_id" type="{http://www.w3.org/2001/XMLSchema}int"/>
-		 *         &lt;element name="party_number" type="{http://www.w3.org/2001/XMLSchema}int"/>
-		 *       &lt;/sequence>
-		 *       &lt;attribute name="num" type="{http://www.w3.org/2001/XMLSchema}int" />
-		 *     &lt;/restriction>
-		 *   &lt;/complexContent>
-		 * &lt;/complexType>
+		 * <complexType>
+		 *   <complexContent>
+		 *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+		 *       <sequence>
+		 *         <element name="party_id" type="{http://www.w3.org/2001/XMLSchema}int"/>
+		 *         <element name="party_number" type="{http://www.w3.org/2001/XMLSchema}int"/>
+		 *       </sequence>
+		 *       <attribute name="num" type="{http://www.w3.org/2001/XMLSchema}int" />
+		 *     </restriction>
+		 *   </complexContent>
+		 * </complexType>
 		 * </pre>
 		 * 
 		 * 
